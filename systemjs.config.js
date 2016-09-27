@@ -13,6 +13,8 @@
       // our app is within the app folder
       app: 'app',
 
+      '@npm/web-api': 'npm:/angular2-in-memory-web-api/in-memory-backend.service',
+
       // angular bundles
       '@angular/core': 'npm:@angular/core/bundles/core.umd.js',
       '@angular/common': 'npm:@angular/common/bundles/common.umd.js',
