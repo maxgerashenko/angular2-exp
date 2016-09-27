@@ -7,10 +7,13 @@ import { routing }       from './app.routing';
 import { InMemoryWebApiModule } from 'angular2-in-memory-web-api';
 import { InMemoryDataService }  from './app.in-memory-data.service';
 
-import AppRootComponent            from './app.root.component';
+import AppRootComponent        from './app.root.component';
 import { HeroDetailComponent } from './app.hero-detail.component';
 import { HeroesComponent }     from './app.heroes.component';
-import { DashBoardComponent }    from './app.dashboard.component';
+import { DashBoardComponent }  from './app.dashboard.component';
+import { HeroSearchComponent } from './app.hero-search.component';
+
+import './rxjs-extensions';
 
 @NgModule({
   imports: [
@@ -24,7 +27,8 @@ import { DashBoardComponent }    from './app.dashboard.component';
     AppRootComponent,
     HeroesComponent,
     HeroDetailComponent,
-    DashBoardComponent
+    DashBoardComponent,
+    HeroSearchComponent
   ],
   bootstrap: [ AppRootComponent ]
 })
