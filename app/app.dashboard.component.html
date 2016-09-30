@@ -4,7 +4,7 @@
     *ngFor="let hero of heroes"
     (click)="gotoDetail(hero)">
       <div class="module hero">
-        <h4>{{hero.name}}</h4>
+        <h4 [ngStyle]="{'color':hero.color}">{{hero.name}}</h4>
       </div>
   </div>
 </div>

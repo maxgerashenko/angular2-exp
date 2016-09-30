@@ -1,8 +1,8 @@
 <h1>{{title}}</h1>
 <div *ngIf="selectedHero">
   <h2>
-    {{selectedHero.name | uppercase}} is my hero
-    <button (click)="gotoDetail()">View Details</button>
+    <span [ngStyle]="{'color': selectedHero.color}">{{selectedHero.name | uppercase}}</span> is my hero
+    <div><button (click)="gotoDetail()">View Details</button></div>
   </h2>
 
 </div>
@@ -18,11 +18,18 @@
 <ul class="heroes">
   <li *ngFor="let hero of heroes"
       [class.selected]="hero === selectedHero"
-      (click)="onSelect(hero)" [ngStyle]="{'color': hero.color}">
+      (click)="onSelect(hero)"
+      [ngStyle]="{'color': hero.color}">
     <span class="badge">{{hero.id}}</span>
     <span>{{hero.name}}</span>
     <button class="delete"
       (click)="deleteHero(hero); $event.stopPropagation()">x</button>
+    <button class="star"
+            [class.favorite]="hero.favorite"
+            (click)="onFavorite(hero);">
+      {{(hero.favorite?'&#9733;':'&#9734;')}}
+    </button>
+
   </li>
 </ul>
 

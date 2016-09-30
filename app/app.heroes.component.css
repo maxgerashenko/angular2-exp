@@ -52,3 +52,14 @@ button.delete {
   background-color: gray !important;
   color:white;
 }
+
+button.star {
+  float:right;
+  margin-top: 2px;
+  margin-right: .8em;
+  color: grey;
+}
+
+button.star.favorite {
+  color: #ffad1a;
+}
