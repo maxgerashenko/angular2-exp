@@ -25,7 +25,7 @@ export class HeroSearchComponent implements OnInit {
   search(term: string): void {
     this.searchTerms.next(term);
   }
-  
+
   ngOnInit(): void {
     this.heroes = this.searchTerms
       .debounceTime(300)        // wait for 300ms pause in events
