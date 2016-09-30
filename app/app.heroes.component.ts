@@ -30,6 +30,11 @@ export class HeroesComponent implements OnInit {
     this.selectedHero = hero;
   }
 
+  onFavorite(hero: Hero): void {
+    hero.favorite = !hero.favorite;
+    this._heroSevise.update(hero);
+  }
+
   getHeroes(): void{
     this._heroSevise.getHeroes().then( res => this.heroes = res );
   }

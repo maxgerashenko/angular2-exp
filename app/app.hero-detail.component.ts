@@ -34,4 +34,14 @@ export class HeroDetailComponent implements OnInit {
 
   @Input() hero: Hero;
 
+  onKeyUp(event, hero: Hero, color): void {
+    hero.color = color.value;
+    console.log('event ', event);
+  }
+
+  onKeyDown(event, hero: Hero): void {
+    this._heroservice.update(hero);
+    this.goBack();
+  }
+
 }

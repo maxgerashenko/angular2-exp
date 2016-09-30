@@ -23,7 +23,12 @@ export class DashBoardComponent implements OnInit {
 
   ngOnInit(): void {
     this._heroSevise.getHeroes()
-      .then(heroes => this.heroes = heroes.slice(1, 5));
+      .then(
+      (heroes) => {
+        let favorite = heroes.filter(h => h.favorite);
+        this.heroes = (favorite.length)? favorite : heroes.slice(1, 5);
+      }
+    );
   }
 
   gotoDetail(hero: Hero): void {
