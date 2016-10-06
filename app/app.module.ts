@@ -13,6 +13,8 @@ import { HeroesComponent }     from './app.heroes.component';
 import { DashBoardComponent }  from './app.dashboard.component';
 import { HeroSearchComponent } from './app.hero-search.component';
 
+import { CollapseOnClickDirective } from './app.collapse-on-click.directive';
+
 import './rxjs-extensions';
 
 @NgModule({
@@ -28,7 +30,8 @@ import './rxjs-extensions';
     HeroesComponent,
     HeroDetailComponent,
     DashBoardComponent,
-    HeroSearchComponent
+    HeroSearchComponent,
+    CollapseOnClickDirective
   ],
   bootstrap: [ AppRootComponent ]
 })

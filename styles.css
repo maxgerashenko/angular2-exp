@@ -144,3 +144,14 @@ nav a.router-link-active {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.add-hero {
+  padding-top: 20px;
+  height: 60px;
+  transition: height 1s ease;
+  overflow: hidden;
+}
+
+.collapsed + .add-hero {
+  height: 0!important;
+}
+
