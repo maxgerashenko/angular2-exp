@@ -16,7 +16,9 @@ class AppRootComponent implements OnInit {
   title: string = `Tour of Heroes`;
   hero: Hero = {
     id: 1,
-    name: 'Windstorm'
+    name: 'Windstorm',
+    color: '',
+    favorite: false
   };
   heroes: Hero[];
   selectedHero: Hero;

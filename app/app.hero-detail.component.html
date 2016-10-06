@@ -9,7 +9,7 @@
   </div>
   <div>
     <label>Color: </label>
-    <input [ngModel]="hero.color" [ngStyle]="{'color':hero.color}" (keydown.Enter)="onKeyDown($e, hero)" (keyup)="onKeyUp($e, hero, color);" #color placeholder="color"/>
+    <input [ngModel]="hero.color" [ngStyle]="{'color':hero.color}" (keydown.Enter)="onKeyDown($e, hero)" (keyup)="onKeyUp($e, hero, color.value);" #color placeholder="color"/>
   </div>
 </div>
 <button (click)="goBack()">Back</button>
