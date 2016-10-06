@@ -40,6 +40,7 @@ export class HeroDetailComponent implements OnInit {
   }
 
   onKeyDown(event: any, hero: Hero): void {
+
     this._heroservice.update(hero);
     this.goBack();
   }
