@@ -7,7 +7,13 @@
 
 </div>
 <div>
-  <div>Add Hero <button collapse-on-click>⌄</button>
+  <div>Add Hero <button collapse-on-click
+                        [collapsed]="collapsed"
+                        (onToggle)="onToggleCollapsed($event)"
+                        #cp="collapsible"
+                        [class.collapsed2]="cp.collapsed"
+                        >
+    ⌄</button>
     <div class="add-hero">
       <label>Hero name:</label> <input #heroName />
       <h4>

@@ -28,7 +28,15 @@ export class HeroesComponent implements OnInit {
   heroes: Hero[];
   selectedHero: Hero;
 
-  onSelect(hero:Hero): void{
+  // collapsed-on-click
+  collapsed: boolean = true;
+  onToggleCollapsed(collapsed: boolean): void {
+    console.log("param 'collapsed'", collapsed);
+    console.log('this.collapsed',this.collapsed);
+    this.collapsed = !this.collapsed;
+  }
+
+  onSelect(hero:Hero): void {
     this.selectedHero = hero;
   }
 
