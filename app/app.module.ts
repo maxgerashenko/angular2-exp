@@ -14,6 +14,9 @@ import { DashBoardComponent }  from './app.dashboard.component';
 import { HeroSearchComponent } from './app.hero-search.component';
 
 import { CollapseOnClickDirective } from './app.collapse-on-click.directive';
+import { showOneTabContainerDirective } from './app.showOneTabContainer.directive';
+import { showOneTabDirective } from './app.showOneTab.directive'
+import { showOneTabTriggerDirective } from './app.showOneTabTrigger.directive'
 
 import './rxjs-extensions';
 
@@ -31,7 +34,10 @@ import './rxjs-extensions';
     HeroDetailComponent,
     DashBoardComponent,
     HeroSearchComponent,
-    CollapseOnClickDirective
+    CollapseOnClickDirective,
+    showOneTabContainerDirective,
+    showOneTabDirective,
+    showOneTabTriggerDirective
   ],
   bootstrap: [ AppRootComponent ]
 })

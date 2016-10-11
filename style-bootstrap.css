@@ -1,0 +1,67 @@
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+.nav {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.nav-pills>li {
+  float: left;
+}
+.nav>li {
+  position: relative;
+  display: block;
+}
+
+.nav-pills>li+li {
+  margin-left: 2px;
+}
+.nav-pills>li {
+  float: left;
+}
+.nav>li {
+  position: relative;
+  display: block;
+}
+
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+  color: #fff;
+  background-color: #337ab7;
+}
+ul.test2 a {
+  color: #337ab7;
+  text-decoration: none !important;
+  border-radius: 4px;
+}
+.nav-pills>li>a {
+  border-radius: 4px;
+}
+.nav>li>a {
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+}
+
+.tabs {
+  overflow: hidden;
+}
+
+ul.test2 a:hover, ul.test2 a:focus {
+  color: #777;
+}
+.nav>li>a:focus, .nav>li>a:hover {
+  text-decoration: none;
+  background-color: #eee;
+}
+ul.test2 a {
+  color: #337ab7;
+  text-decoration: none !important;
+  border-radius: 4px;
+}

@@ -1,15 +1,27 @@
-<h3>Top Heroes</h3>
-<div class="grid grid-pad">
-  <div class="col-1-4"
-    *ngFor="let hero of heroes"
-    (click)="gotoDetail(hero)">
-      <div class="module hero">
-        <h4 [ngStyle]="{'color':hero.color}">{{hero.name}}</h4>
-      </div>
+<div class="tabs-container" showOneTabContainer>
+  <div class="tabs">
+    <ul class="nav nav-pills">
+      <li showOneTabTrigger="heroes-top" [active]="true" ><a>Top Heroes</a></li>
+      <li showOneTabTrigger="heroes-search" ><a>Search</a></li>
+    </ul>
   </div>
-</div>
-<hero-search></hero-search>
 
+  <div class="heroes-top tab" showOneTab="heroes-top" [active]="true">
+    <h3>Top Heroes</h3>
+    <div class="grid grid-pad">
+      <div class="col-1-4"
+           *ngFor="let hero of heroes"
+           (click)="gotoDetail(hero)">
+        <div class="module hero">
+          <h4 [ngStyle]="{'color':hero.color}">{{hero.name}}</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hero-search class="tab" showOneTab="heroes-search"></hero-search>
+
+</div>
 
 
 
