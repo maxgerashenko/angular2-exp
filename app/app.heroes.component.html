@@ -6,25 +6,20 @@
   </h2>
 
 </div>
-<div>
-  <div>Add Hero <button collapse-on-click
+  <h2>Add Hero <button collapse-on-click
                         [collapsed]="collapsed"
                         (onToggle)="onToggleCollapsed($event)"
                         #cp="collapsible"
-                        [class.collapsed2]="cp.collapsed"
                         >
-    ⌄</button>
-    <div class="add-hero">
-      <label>Hero name:</label> <input #heroName />
-      <h4>
-        <button (click)="addHero(heroName.value); heroName.value=''">
-          Add
-        </button>
-      </h4>
-    </div>
+    {{(cp.collapsed)?'△':'▼'}}</button>
+  </h2>
+  <div class="add-hero" *ngIf="cp.collapsed">
+    <label>Hero name:</label> <input #heroName />
+      <button (click)="addHero(heroName.value); heroName.value=''">
+        Add
+      </button>
   </div>
 
-</div>
 <h2>My Heroes</h2>
 <ul class="heroes">
   <li *ngFor="let hero of heroes"
