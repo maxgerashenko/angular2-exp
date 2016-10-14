@@ -5,10 +5,51 @@ import { Hero } from './hero';
 
 import { HeroService } from './app.hero.service';
 
+import {
+  trigger,
+  state,
+  style,
+  transition,
+  animate,
+  keyframes
+} from '@angular/core';
+
+
 @Component({
   selector: 'my-heroes',
   templateUrl: 'app/app.heroes.component.html',
-  styleUrls: [ 'app/app.heroes.component.css']
+  styleUrls: [ 'app/app.heroes.component.css'],
+  animations: [
+    trigger('flyInOut', [
+      state('in', style({transform: 'translateX(0)'})),
+      transition('void => *', [
+        animate(500, keyframes([
+          style({opacity: 0, transform: 'translateX(-100%)', offset: 0}),
+          style({opacity: 1, transform: 'translateX(15px)',  offset: 0.3}),
+          style({opacity: 1, transform: 'translateX(0)',     offset: 0.4})
+        ]))
+      ]),
+      transition('* => void', [
+        animate(300, keyframes([
+          style({opacity: 1, transform: 'translateX(0)',     offset: 0}),
+          style({opacity: 1, transform: 'translateX(-15px)', offset: 0.7}),
+          style({opacity: 0, transform: 'translateX(100%)',  offset: 1.0})
+        ]))
+      ])
+    ]),
+    trigger('heroFav', [
+      state('inactive', style({
+        backgroundColor: '#eee',
+        transform: 'scale(1)'
+      })),
+      state('active',   style({
+        backgroundColor: '#cfd8dc',
+        transform: `scale(1.1)`
+      })),
+      transition('inactive => active', animate('100ms ease-in')),
+      transition('active => inactive', animate('100ms ease-out'))
+    ])
+  ]
 })
 
 export class HeroesComponent implements OnInit {
@@ -77,5 +118,4 @@ export class HeroesComponent implements OnInit {
         if (this.selectedHero === hero) { this.selectedHero = null; }
       });
   }
-
 }

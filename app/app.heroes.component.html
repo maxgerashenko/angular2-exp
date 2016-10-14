@@ -14,7 +14,7 @@
     {{(cp.collapsed)?'△':'▼'}}</button>
   </h2>
   <div class="add-hero" *ngIf="cp.collapsed">
-    <label>Hero name:</label> <input #heroName />
+    <label>Hero name:</label> <input #heroName  placeholder="Enter Name" (keydown.Enter)="addHero(heroName.value); heroName.value='';" />
       <button (click)="addHero(heroName.value); heroName.value=''">
         Add
       </button>
@@ -24,6 +24,7 @@
 <ul class="heroes">
   <li *ngFor="let hero of heroes | herosort:'FAV'"
       [class.selected]="hero === selectedHero"
+      [@flyInOut]
       (click)="onSelect(hero)"
       [ngStyle]="{'color': hero.color}">
     <span class="badge">{{hero.id}}</span>
