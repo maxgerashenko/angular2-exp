@@ -13,10 +13,12 @@ import { HeroesComponent }     from './app.heroes.component';
 import { DashBoardComponent }  from './app.dashboard.component';
 import { HeroSearchComponent } from './app.hero-search.component';
 
-import { CollapseOnClickDirective } from './app.collapse-on-click.directive';
+import { CollapseOnClickDirective }     from './app.collapse-on-click.directive';
 import { showOneTabContainerDirective } from './app.showOneTabContainer.directive';
-import { showOneTabDirective } from './app.showOneTab.directive'
-import { showOneTabTriggerDirective } from './app.showOneTabTrigger.directive'
+import { showOneTabDirective }          from './app.showOneTab.directive'
+import { showOneTabTriggerDirective }   from './app.showOneTabTrigger.directive'
+
+import { HeroPipe } from './app.heropipe.pipe';
 
 import './rxjs-extensions';
 
@@ -37,7 +39,8 @@ import './rxjs-extensions';
     CollapseOnClickDirective,
     showOneTabContainerDirective,
     showOneTabDirective,
-    showOneTabTriggerDirective
+    showOneTabTriggerDirective,
+    HeroPipe
   ],
   bootstrap: [ AppRootComponent ]
 })

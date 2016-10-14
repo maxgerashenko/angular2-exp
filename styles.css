@@ -150,3 +150,8 @@ nav a.router-link-active {
   overflow: hidden;
 }
 
+[required] {
+  box-shadow: 0px 0px 7px red;
+  border: red 1px solid;
+}
+

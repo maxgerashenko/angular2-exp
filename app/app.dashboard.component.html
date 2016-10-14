@@ -1,4 +1,8 @@
 <div class="tabs-container" showOneTabContainer>
+
+  <h2> {{ title | uppercase | slice:0:12 }}</h2>
+  <h4>Date: {{ date | date:'dd MMM yyyy'}}</h4>
+
   <div class="tabs">
     <ul class="nav nav-pills">
       <li showOneTabTrigger="heroes-top" [active]="true" ><a>Top Heroes</a></li>

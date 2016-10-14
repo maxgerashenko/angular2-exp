@@ -19,6 +19,9 @@ export class DashBoardComponent implements OnInit {
     private router: Router
   ) {}
 
+  date: Date = new Date();
+  title: string = 'My Dashboard Title';
+
   heroes: Hero [] = [];
 
   ngOnInit(): void {

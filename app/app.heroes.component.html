@@ -22,14 +22,14 @@
 
 <h2>My Heroes</h2>
 <ul class="heroes">
-  <li *ngFor="let hero of heroes"
+  <li *ngFor="let hero of heroes | herosort:'FAV'"
       [class.selected]="hero === selectedHero"
       (click)="onSelect(hero)"
       [ngStyle]="{'color': hero.color}">
     <span class="badge">{{hero.id}}</span>
     <span>{{hero.name}}</span>
     <button class="delete"
-      (click)="deleteHero(hero); $event.stopPropagation()">x</button>
+            (click)="deleteHero(hero); $event.stopPropagation()">x</button>
     <button class="star"
             [class.favorite]="hero.favorite"
             (click)="onFavorite(hero);">
@@ -38,4 +38,6 @@
 
   </li>
 </ul>
+
+
 
